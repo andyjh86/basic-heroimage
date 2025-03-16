@@ -1,0 +1,84 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles (if not added yet) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust as needed */
+    background-color: black;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding if needed */
+}
+
+/* Adjust Hero Section */
+.hero {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px; /* Pushes hero section down --delete this if hero is to be at the very top */
+}
+
+/* Hero image styling */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Image is at the bottom */
+}
+
+/* Overlay added above image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
+    z-index: 1; /* Overlay sits above the image */
+}
+
+/* Ensures text is on top of the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Content is the topmost layer */
+}
+
+/* Call to action button */
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: darkblue;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-button:hover {
+    background: grey;
+}
